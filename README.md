@@ -1,0 +1,1 @@
+To run the project just type the command -- npm run dev
