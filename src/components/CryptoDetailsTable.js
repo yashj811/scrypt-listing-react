@@ -19,7 +19,7 @@ const CryptoDetailsTable = () => {
 
   const getSavedInfo = async () => {
     setLoading(true);
-    const servRes = await axios.get("http://localhost:5000/api/crypto");
+    const servRes = await axios.get("https://crypt-listing-app-api.herokuapp.com/api/crypto");
     if (servRes.data) {
       setSaved(servRes.data);
     }
@@ -56,7 +56,7 @@ const CryptoDetailsTable = () => {
     setDeleting(true);
 
     try {
-      const servRes = await axios.put("http://localhost:5000/api/crypto", {
+      const servRes = await axios.put("https://crypt-listing-app-api.herokuapp.com/api/crypto", {
         name: e.target.value,
       });
       if (servRes.data) {
@@ -91,7 +91,7 @@ const CryptoDetailsTable = () => {
       };
 
       const servRes = await axios.post(
-        "http://localhost:5000/api/crypto",
+        "https://crypt-listing-app-api.herokuapp.com/api/crypto",
         body
       );
 
